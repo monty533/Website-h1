@@ -21,5 +21,5 @@ def contact_view(request):
         phone = request.POST.get('phone')
         contact = Contact(name=name,email=email,phone=phone)
         contact.save()
-        messages.success(request, 'Your massage has been sent.')
+        messages.success(request, 'Your form has been submitted.')
     return render(request,'contact.html')
